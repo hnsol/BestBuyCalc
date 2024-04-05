@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
     font-size: 42px;
     margin: 20px;
     color: gray;
@@ -42,6 +42,13 @@ button:hover {
 p {
     text-align: center; /* 結果表示をセンタリング */
 }
+#result {
+    text-align: left; /* 左寄せ */
+    width: 80%; /* テーブルと同じ幅に */
+    margin: 0 auto; /* 上下のマージンは0、左右のマージンをautoにして中央揃え */
+    padding: 0; /* 必要に応じて調整 */
+    box-sizing: border-box; /* paddingとborderを含めた幅の計算 */
+}
 
 /* 表の線をなくす */
 .no-border td, .no-border th {
@@ -60,5 +67,17 @@ p {
     margin: 10px auto; /* センタリング */
     text-align: center; /* 入力されたテキストをセンタリング */
 }
+
+.cursor {
+    font-weight: bold;
+    font-size: 1.3em; /* ●のサイズ */
+    color: gray; /* ●の色 */
+    opacity: 1; /* 初期状態は完全に不透明 */
+    transition: opacity 0.5s ease; /* 透明度変化のアニメーション */
+    vertical-align: middle; /* 垂直方向の位置を中央揃えに */
+    position: relative; /* 相対位置 */
+    top: -0.1em; /* 上からの相対位置を少し下げる */
+}
+
 
 
