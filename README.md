@@ -21,7 +21,7 @@
 
 | 60g 98円                                                                      | 160g 258円                                                                    |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![](https://www.calbee.co.jp/common/utility/binout.php?db=products&f=3470) | ![](https://www.calbee.co.jp/common/utility/binout.php?db=products&f=3237) |
+| ![60g](https://www.calbee.co.jp/common/utility/binout.php?db=products&f=3470) | ![160g](https://www.calbee.co.jp/common/utility/binout.php?db=products&f=3237) |
 
 この計算機を使えば、もうサイズや価格の違う商品を見比べて迷う人生はさようならです。
 
@@ -34,8 +34,7 @@
 
 ## スクリーンショット
 
-（ここにアプリのスクリーンショットを挿入）
-
+![calclating](https://cdn-ak.f.st-hatena.com/images/fotolife/m/masatora_bd5/20240405/20240405192649.jpg)
 ## FAQ
 
 **Q: どんな商品に使えますか？**
