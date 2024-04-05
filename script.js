@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     inputs.forEach(function(input) {
         input.addEventListener('input', debounce(autoCalculate, 500));
     });
+    
+    // id="quantityA"の入力フィールドにフォーカスを当てる
+    document.getElementById('quantityA').focus();
 });
 
 // タイプライターっぽいエフェクトに記号を追加する
