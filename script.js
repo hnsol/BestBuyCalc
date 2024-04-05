@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // アプリ起動時にメッセージを表示
-    document.getElementById('result').textContent = '量と価格を教えてください';
+    document.getElementById('result').textContent = '量と価格の情報が必要です。入力してください';
 
     // 入力フィールドにイベントリスナーを追加
 //    document.getElementById('quantityA').addEventListener('input', autoCalculate);
@@ -67,7 +67,7 @@ function autoCalculate() {
 
     // 入力が3つ以上あるかどうかチェック
     if (inputsFilled < 3) {
-        document.getElementById('result').textContent = 'いい感じです。さらに入力ください……';
+        document.getElementById('result').textContent = 'もう少し情報があれば、最適なアドバイスができそうです。続けて入力してみてください';
         return; // 早期リターン
     }
 
@@ -75,30 +75,26 @@ function autoCalculate() {
     var resultText = '';
     if (!quantityA) {
         let unitPriceB = priceB / quantityB;
-//        resultText = `Aの量が${unitPriceB * priceA}より多かったら、Aを買おう！`;
-        resultText = `Aが${Math.floor(unitPriceB * priceA * 100) / 100}より多ければ、Aがおすすめです！`;
+        resultText = `もしAの量が${Math.floor(priceA / unitPriceB * 100) / 100}を超えるなら、Aを選ぶのが良さそうです！`;
     } else if (!priceA) {
         let unitPriceB = priceB / quantityB;
-//        resultText = `Aの値段が${unitPriceB * quantityA}円より安かったら、Aを買おう！`;
-        resultText = `Aが${Math.floor(unitPriceB * quantityA * 100) / 100}円より安ければ、Aがおすすめです！`;
+        resultText = `Aが${Math.floor(unitPriceB * quantityA * 100) / 100}円以下であれば、Aの方がお得です！`;
     } else if (!quantityB) {
         let unitPriceA = priceA / quantityA;
-//        resultText = `Bの量が${unitPriceA * priceB}より多かったら、Bを買おう！`;
-        resultText = `Bが${Math.floor(unitPriceA * priceB * 100) / 100}より多ければ、Bがおすすめです！`;
+        resultText = `もしBの量が${Math.floor(priceB / unitPriceA * 100) / 100}を超えるなら、Bを選ぶのが良さそうです！`;
     } else if (!priceB) {
         let unitPriceA = priceA / quantityA;
-//        resultText = `Bの値段が${unitPriceA * quantityB}円より安かったら、Bを買おう！`;
-        resultText = `Bが${Math.floor(unitPriceA * quantityB * 100) / 100}円より安ければ、Bがおすすめです！`;
+        resultText = `Bが${Math.floor(unitPriceA * quantityB * 100) / 100}円以下であれば、Bの方がお得です！`;
     } else {
         // すべてのフィールドが入力されている場合の計算
         var unitPriceA = priceA / quantityA;
         var unitPriceB = priceB / quantityB;
         if (unitPriceA < unitPriceB) {
-            resultText = "Aがお買い得です";
+            resultText = "Aの方がお得みたいです。いかがでしょう？";
         } else if (unitPriceA > unitPriceB) {
-            resultText = "Bがお買い得です";
+            resultText = "Bの方がお得みたいです。いかがでしょう？";
         } else {
-            resultText = "AとBの単価はおなじです。どちらを選ばれてもよいでしょう";
+            resultText = "どちらも同じ単価のようです。お好きな方を選んでください。迷ったときは、心の声を聴いてみましょう！";
         }
     }
 //    document.getElementById('result').textContent = resultText;

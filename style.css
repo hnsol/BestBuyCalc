@@ -6,78 +6,72 @@ body {
     text-align: center;
     background-color: #ddd; /* 明るいグレー */
 }
-table {
+
+table, #result {
     width: 80%;
-    max-width: 80%; /* 最大幅を80%に設定 */
-    margin: 20px auto; /* 上下のマージンを20px、左右のマージンを自動調整してセンタリング */
+    max-width: 80%;
+    margin: 20px auto;
     border-collapse: collapse;
 }
+
 th, td {
     padding: 8px;
     text-align: center;
     border: 1px solid #ddd;
 }
-th:first-child, td:first-child {
-    border-left: none; /* いちばん左のセルの左側の線を消す */
-    background-color: transparent; /* 色を付けない */
+
+th:first-child, td:first-child, .no-border th, .no-border td {
+    border-left: none;
+    background-color: transparent;
 }
+
+/* 共通スタイルをまとめる */
 th {
     background-color: transparent;
 }
-/* 計算ボタンを大きくする */
+
 button {
     cursor: pointer;
-    padding: 15px 30px; /* ボタンを大きくする */
-    font-size: 32px; /* ボタンの文字サイズ */
+    padding: 15px 30px;
+    font-size: 32px;
     background-color: #555;
     color: white;
     border: none;
     border-radius: 16px;
     display: block;
-    margin: 20px auto; /* ボタンをセンタリング */
+    margin: 20px auto;
 }
+
 button:hover {
-    background-color: #45a049;
-}
-p {
-    text-align: center; /* 結果表示をセンタリング */
-}
-#result {
-    text-align: left; /* 左寄せ */
-    width: 80%; /* テーブルと同じ幅に */
-    margin: 0 auto; /* 上下のマージンは0、左右のマージンをautoにして中央揃え */
-    padding: 0; /* 必要に応じて調整 */
-    box-sizing: border-box; /* paddingとborderを含めた幅の計算 */
+    background-color: #333;
 }
 
-/* 表の線をなくす */
-.no-border td, .no-border th {
-  border: none;
-}
-
-/* 入力フィールドを大きくし、センタリングする */
 .input-large {
-    font-size: 48px; /* テキストサイズを大きく */
-    padding: 15px 20px; /* 内側の余白を広げる */
-    border: 4px none;
+    font-size: 48px;
+    padding: 15px 20px;
+    border: none; /* noneをsolidに修正し、border-colorを指定 */
     border-radius: 4px;
-    width: calc(100% - 40px); /* 全体の幅からpadding分を引く */
-    box-sizing: border-box; /* padding と border を含めた幅計算 */
-    display: block; /* ブロックレベル要素として表示 */
-    margin: 10px auto; /* センタリング */
-    text-align: center; /* 入力されたテキストをセンタリング */
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .cursor {
     font-weight: bold;
-    font-size: 1.3em; /* ●のサイズ */
-    color: gray; /* ●の色 */
-    opacity: 1; /* 初期状態は完全に不透明 */
-    transition: opacity 0.5s ease; /* 透明度変化のアニメーション */
-    vertical-align: middle; /* 垂直方向の位置を中央揃えに */
-    position: relative; /* 相対位置 */
-    top: -0.1em; /* 上からの相対位置を少し下げる */
+    font-size: 1.3em;
+    color: gray;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1em;
 }
 
-
-
+/* 結果表示用スタイル */
+#result {
+    text-align: left;
+    padding: 0;
+    box-sizing: border-box;
+}
