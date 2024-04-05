@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // アプリ起動時にメッセージを表示
-    document.getElementById('result').textContent = 'AとBの量と値段を入力してください。';
+    document.getElementById('result').textContent = '量と価格を教えてください';
 
     // 入力フィールドにイベントリスナーを追加
     document.getElementById('quantityA').addEventListener('input', autoCalculate);

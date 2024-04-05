@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 42px;
     margin: 20px;
+    color: dimgray;
+    text-align: center;
+    background-color: #ddd; /* 明るいグレー */
 }
 table {
     width: 80%;
@@ -18,14 +22,14 @@ th:first-child, td:first-child {
     background-color: transparent; /* 色を付けない */
 }
 th {
-    background-color: #f2f2f2;
+    background-color: transparent;
 }
 /* 計算ボタンを大きくする */
 button {
     cursor: pointer;
     padding: 15px 30px; /* ボタンを大きくする */
-    font-size: 18px; /* ボタンの文字サイズを大きくする */
-    background-color: #4CAF50;
+    font-size: 36px; /* ボタンの文字サイズ */
+    background-color: #555;
     color: white;
     border: none;
     border-radius: 4px;
@@ -36,7 +40,6 @@ button:hover {
     background-color: #45a049;
 }
 p {
-    font-size: 18px; /* 結果表示の文字サイズを大きくする */
     text-align: center; /* 結果表示をセンタリング */
 }
 
@@ -47,9 +50,9 @@ p {
 
 /* 入力フィールドを大きくし、センタリングする */
 .input-large {
-    font-size: 18px; /* テキストサイズを大きく */
+    font-size: 48px; /* テキストサイズを大きく */
     padding: 15px 20px; /* 内側の余白を広げる */
-    border: 2px solid #ccc;
+    border: 2px solid #ddd;
     border-radius: 4px;
     width: calc(100% - 40px); /* 全体の幅からpadding分を引く */
     box-sizing: border-box; /* padding と border を含めた幅計算 */
