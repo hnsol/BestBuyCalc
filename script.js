@@ -95,9 +95,9 @@ function autoCalculate() {
         var unitPriceA = priceA / quantityA;
         var unitPriceB = priceB / quantityB;
         if (unitPriceA < unitPriceB) {
-            resultText = "Aの方がお得みたいです。いかがでしょう？";
+            resultText = "Aの方がお得です。こちらを選んではいかがでしょうか";
         } else if (unitPriceA > unitPriceB) {
-            resultText = "Bの方がお得みたいです。いかがでしょう？";
+            resultText = "Bの方がお得です。こちらを選んではいかがでしょうか";
         } else {
             resultText = "どちらも同じ単価のようです。お好きな方を選んでください。迷ったときは、心の声を聴いてみましょう！";
         }
