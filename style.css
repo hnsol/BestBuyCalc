@@ -30,6 +30,11 @@ th {
     background-color: transparent;
 }
 
+input:focus, textarea:focus, select:focus {
+    outline: none; /* アウトラインを消去 */
+    background-color: #e0f7fa; /* 薄いブルー */
+}
+
 button {
     cursor: pointer;
     padding: 15px 30px;
