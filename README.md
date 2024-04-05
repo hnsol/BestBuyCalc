@@ -27,7 +27,7 @@
 
 ## 使い方
 
-1. お買い得 AI のウェブページ [お買い得 AI - Best Buy Calculator](https://hnsol.github.io/BestBuyCalc/) にアクセスします。
+1. お買い得 AI のウェブページ [買い物上手 AI - Best Buy AI Calculator](https://hnsol.github.io/BestBuyCalc/) にアクセスします。
 2. 商品 A の「量（g, ml）」と「価格（円）」を入力します。
 3. 商品 B の「量（g, ml）」と「価格（円）」を入力します。
 4. 結果が表示されます。よりお得な商品の選択肢が示されます。
