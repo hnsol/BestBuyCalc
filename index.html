@@ -9,25 +9,24 @@
 </head>
 <body>
 
-<table class="no-border">
-    <tr>
-        <th></th>
-        <th>量 (g, ml)</th>
-        <th>価格（円）</th>
-    </tr>
-    <tr>
-        <td> A </td>
-        <td><input type="number" id="quantityA" class="input-large" required></td>
-        <td><input type="number" id="priceA" class="input-large" required></td>
-    </tr>
-    <tr>
-        <td> B </td>
-        <td><input type="number" id="quantityB" class="input-large" required></td>
-        <td><input type="number" id="priceB" class="input-large" required></td>
-    </tr>
-</table>
+<div class="grid-container">
+    <div class="grid-header"></div>
+    <div class="grid-header">量 (g, ml)</div>
+    <div class="grid-header">価格（円）</div>
 
-<button onclick="comparePrices()">計算</button>
+    <div>A</div>
+    <div><input type="number" id="quantityA" class="input-large" required></div>
+    <div><input type="number" id="priceA" class="input-large" required></div>
+
+    <div>B</div>
+    <div><input type="number" id="quantityB" class="input-large" required></div>
+    <div><input type="number" id="priceB" class="input-large" required></div>
+
+    <div class="grid-buttons" colspan="2">
+        <button onclick="clearFields()">C</button>
+        <button onclick="comparePrices()">＝</button>
+    </div>
+</div>
 
 <p id="result"></p>
 
@@ -35,4 +34,3 @@
 
 </body>
 </html>
-

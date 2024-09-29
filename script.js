@@ -110,3 +110,14 @@ function autoCalculate() {
     lastInputsFilledCount = inputsFilled; // 現在の入力フィールドの状態を更新
 
 }
+
+function clearFields() {
+    document.getElementById('quantityA').value = '';
+    document.getElementById('priceA').value = '';
+    document.getElementById('quantityB').value = '';
+    document.getElementById('priceB').value = '';
+    document.getElementById('result').textContent = '量と価格の情報が必要です。入力してください';
+    
+    // フォーカスを最初の入力フィールドに移動
+    document.getElementById('quantityA').focus();
+}

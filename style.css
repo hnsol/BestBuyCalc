@@ -4,35 +4,28 @@ body {
     margin: 20px;
     color: gray;
     text-align: center;
-    background-color: #ddd; /* 明るいグレー */
+    background-color: #ddd;
 }
 
-table, #result {
+.grid-container {
+    display: grid;
+    grid-template-columns: min-content 1fr 1fr; /* 3列構成：左列を最小限、残りを等分 */
+    grid-template-rows: auto auto auto auto; /* 4行構成 */
+    grid-gap: 10px;
     width: 80%;
-    max-width: 80%;
     margin: 20px auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 8px;
     text-align: center;
-    border: 1px solid #ddd;
 }
 
-th:first-child, td:first-child, .no-border th, .no-border td {
-    border-left: none;
-    background-color: transparent;
+.grid-header {
+    font-weight: bold;
 }
 
-/* 共通スタイルをまとめる */
-th {
-    background-color: transparent;
-}
-
-input:focus, textarea:focus, select:focus {
-    outline: none; /* アウトラインを消去 */
-    background-color: #e0f7fa; /* 薄いブルー */
+.grid-buttons {
+    grid-column: 3 / 4; /* 3列目に配置 */
+    grid-row: 4 / 5; /* 4行目に配置 */
+    position: relative; /* 相対位置を指定できるようにする */
+    height: 100px; /* ボタンの配置のための高さを調整 */
 }
 
 button {
@@ -43,38 +36,35 @@ button {
     color: white;
     border: none;
     border-radius: 16px;
-    display: block;
-    margin: 20px auto;
+    position: absolute; /* ボタンの絶対配置 */
+    transform: translateX(-50%); /* ボタンの中央揃え用 */
 }
 
 button:hover {
     background-color: #333;
 }
 
+/* Cボタンをセルの50%位置に配置 */
+.grid-buttons button:first-child {
+    left: 50%; /* 左端から50%の位置 */
+    background-color: #999; /* 薄いグレー */
+}
+
+/* ＝ボタンをセルの75%位置に配置 */
+.grid-buttons button:last-child {
+    left: 80%; /* 左端から75%の位置 */
+}
+
 .input-large {
     font-size: 48px;
     padding: 15px 20px;
-    border: 4px solid #ddd; /* noneをsolidに修正し、border-colorを指定 */
+    border: 4px solid #ddd;
     border-radius: 4px;
     width: calc(100% - 40px);
     box-sizing: border-box;
-    display: block;
-    margin: 10px auto;
     text-align: center;
 }
 
-.cursor {
-    font-weight: bold;
-    font-size: 1.3em;
-    color: gray;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    vertical-align: middle;
-    position: relative;
-    top: -0.1em;
-}
-
-/* 結果表示用スタイル */
 #result {
     text-align: left;
     padding: 0;
