@@ -17,6 +17,26 @@ body {
     text-align: center;
 }
 
+/* モバイルデバイス用のレイアウト調整 */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* 2列構成に変更 */
+        grid-template-rows: auto auto auto auto auto; /* 行数を増やす */
+        width: 90%; /* 横幅を少し広げる */
+    }
+
+    /* ボタンは2列目と3列目を跨ぐように */
+    .grid-buttons {
+        grid-column: 1 / 3; /* 全幅にボタンを配置 */
+        justify-content: center;
+    }
+
+    /* ボタン間隔調整 */
+    button {
+        width: 45%; /* ボタン幅を小さくして並べやすく */
+    }
+}
+
 .grid-header {
     font-weight: bold;
 }
@@ -52,7 +72,7 @@ button:hover {
 
 /* ＝ボタンをセルの75%位置に配置 */
 .grid-buttons button:last-child {
-    left: 80%; /* 左端から75%の位置 */
+    left: 80%; /* 左端から80%の位置 */
 }
 
 .input-large {
