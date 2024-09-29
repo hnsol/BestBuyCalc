@@ -9,8 +9,10 @@ body {
 
 /* 共通の幅を設定 */
 .container {
-    max-width: 600px; /* テーブルとテキストの幅を揃える */
+    max-width: 900px; /* 最大幅を900pxに変更、広い画面で拡張 */
+    width: 100%; /* 横幅は常に100% */
     margin: 0 auto; /* 中央揃え */
+    padding: 0 10px; /* デバイスの左右に余白を追加 */
 }
 
 .grid-container {
@@ -73,12 +75,13 @@ button:hover {
 /* Cボタンをセルの50%位置に配置 */
 .grid-buttons button:first-child {
     left: 50%; /* 左端から50%の位置 */
-    background-color: #999; /* 薄いグレー */
+/*    background-color: #999; /* 薄いグレー */*/
 }
 
 /* ＝ボタンをセルの80%位置に配置 */
 .grid-buttons button:last-child {
     left: 80%; /* 左端から80%の位置 */
+    background-color: #999; /* 薄いグレー */
 }
 
 .input-large {
