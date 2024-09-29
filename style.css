@@ -1,6 +1,6 @@
 body {
     font-family: 'M PLUS 1p', sans-serif;
-    font-size: 42px;
+    font-size: 48px;
     margin: 20px;
     color: gray;
     text-align: center;
@@ -59,7 +59,7 @@ body {
 button {
     cursor: pointer;
     padding: 15px 30px;
-    font-size: 32px;
+    font-size: 42px;
     background-color: #555;
     color: white;
     border: none;
