@@ -9,26 +9,29 @@
 </head>
 <body>
 
-<div class="grid-container">
-    <div class="grid-header"></div>
-    <div class="grid-header">量 (g, ml)</div>
-    <div class="grid-header">価格（円）</div>
+<div class="container">
+    <div class="grid-container">
+        <div class="grid-header"></div>
+        <div class="grid-header">量 (g, ml)</div>
+        <div class="grid-header">価格（円）</div>
 
-    <div>A</div>
-    <div><input type="number" id="quantityA" class="input-large" required></div>
-    <div><input type="number" id="priceA" class="input-large" required></div>
+        <div>A</div>
+        <div><input type="number" id="quantityA" class="input-large" required></div>
+        <div><input type="number" id="priceA" class="input-large" required></div>
 
-    <div>B</div>
-    <div><input type="number" id="quantityB" class="input-large" required></div>
-    <div><input type="number" id="priceB" class="input-large" required></div>
+        <div>B</div>
+        <div><input type="number" id="quantityB" class="input-large" required></div>
+        <div><input type="number" id="priceB" class="input-large" required></div>
 
-    <div class="grid-buttons" colspan="2">
-        <button onclick="clearFields()">C</button>
-        <button onclick="comparePrices()">＝</button>
+        <div class="grid-buttons">
+            <button onclick="clearFields()">C</button>
+            <button onclick="comparePrices()">＝</button>
+        </div>
+
+        <!-- ここでグリッドの2列目と3列目を使用して、テキストを右側2列に配置 -->
+        <p id="result" class="grid-result">量と価格の情報を入力してください</p>
     </div>
 </div>
-
-<p id="result"></p>
 
 <script src="script.js"></script>
 

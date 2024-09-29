@@ -7,14 +7,20 @@ body {
     background-color: #ddd;
 }
 
+/* 共通の幅を設定 */
+.container {
+    max-width: 600px; /* テーブルとテキストの幅を揃える */
+    margin: 0 auto; /* 中央揃え */
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: min-content 1fr 1fr; /* 3列構成：左列を最小限、残りを等分 */
-    grid-template-rows: auto auto auto auto; /* 4行構成 */
+    grid-template-rows: auto auto auto auto auto; /* 5行構成に拡張 */
     grid-gap: 10px;
-    width: 80%;
-    margin: 20px auto;
+    width: 100%; /* コンテナに合わせる */
     text-align: center;
+    margin: 0 auto;
 }
 
 /* モバイルデバイス用のレイアウト調整 */
@@ -22,7 +28,7 @@ body {
     .grid-container {
         grid-template-columns: 1fr 1fr; /* 2列構成に変更 */
         grid-template-rows: auto auto auto auto auto; /* 行数を増やす */
-        width: 90%; /* 横幅を少し広げる */
+        width: 100%; /* 横幅を100%にする */
     }
 
     /* ボタンは2列目と3列目を跨ぐように */
@@ -70,7 +76,7 @@ button:hover {
     background-color: #999; /* 薄いグレー */
 }
 
-/* ＝ボタンをセルの75%位置に配置 */
+/* ＝ボタンをセルの80%位置に配置 */
 .grid-buttons button:last-child {
     left: 80%; /* 左端から80%の位置 */
 }
@@ -85,8 +91,13 @@ button:hover {
     text-align: center;
 }
 
-#result {
-    text-align: left;
+/* テキスト表示を右側2列分に制限 */
+.grid-result {
+    grid-column: 2 / 4; /* 右側2列に配置 */
+    grid-row: 5 / 6; /* 最後の行に配置 */
+    margin: 20px auto;
+    text-align: left; /* テキストを左寄せにする */
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
